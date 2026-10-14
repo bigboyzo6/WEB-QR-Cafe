@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QR-Cafe - Verifikasi Login</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Font Inter dari Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="login-verification-container">
+    <div class="verification-content">
+      
+      <!-- Header / Brand -->
+      <div class="header">
+        <div class="brand">
+          <svg class="coffee-mark" width="26" height="18" viewBox="0 0 26 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Logo Coffee Mark">
+            <path d="M1.36816 1.00043H20.5264C21.7127 1.00044 22.8505 1.47121 23.6895 2.31C24.5284 3.14898 25 4.28757 25 5.47406C24.9999 6.66043 24.5283 7.79825 23.6895 8.63715C22.8505 9.47602 21.7128 9.94768 20.5264 9.94769H18.1582V12.3159C18.1582 13.5023 17.6865 14.64 16.8477 15.4789C16.0088 16.3178 14.8709 16.7894 13.6846 16.7895H5.47363C4.28716 16.7895 3.14951 16.3179 2.31055 15.4789C1.47158 14.64 1.00001 13.5023 1 12.3159V1.36859C1 1.27098 1.03846 1.17692 1.10785 1.10785C1.17645 1.03882 1.27055 1.0005 1.36816 1.00043Z" stroke="#4A2C2A" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <span class="brand-text">QR-Cafe</span>
+        </div>
+      </div>
+
+      <!-- Introduction Section -->
+      <div class="introduction">
+        <h1 class="intro-title">Nikmati Suasana Kafe Kami.</h1>
+        <p class="intro-subtitle">Isi dulu data diri anda.</p>
+      </div>
+
+      <!-- Verification Form Section -->
+      <form class="verification-form">
+        
+        <!-- Field: Email -->
+        <div class="form-field">
+          <label class="field-label">Email</label>
+          <div class="input-container">
+            <svg class="input-icon" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M16.5006 5.25039L9.75681 9.54521C9.52796 9.6781 9.26802 9.7481 9.00337 9.7481C8.73873 9.7481 8.47879 9.6781 8.24994 9.54521L1.4994 5.25039M2.99952 3.00061H15.0005C15.889 3.00061 16.5006 3.67212 16.5006 4.50046V13.4996C16.5006 14.3279 15.829 14.9994 15.0005 14.9994H2.99952C2.17103 14.9994 1.4994 14.3279 1.4994 13.4996V4.50046C1.4994 3.67212 2.17103 3.00061 2.99952 3.00061Z" stroke="#756C65" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+            <input type="email" value="alex@email.com" class="input-text">
+          </div>
+        </div>
+
+        <!-- Field: Nama -->
+        <div class="form-field">
+          <label class="field-label">Nama</label>
+          <div class="input-container">
+            <svg class="input-icon" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M9 9.75C11.071 9.75 12.75 8.07107 12.75 6C12.75 3.92893 11.071 2.25 9 2.25C6.92914 2.25 5.25038 3.92893 5.25038 6C5.25038 8.07107 6.92914 9.75 9 9.75ZM9 9.75C10.5911 9.75 12.1171 10.3821 13.2422 11.5074C14.3673 12.6326 14.9994 14.1587 14.9994 15.75M9 9.75C7.40886 9.75 5.88289 10.3821 4.75778 11.5074C3.63268 12.6326 3.0006 14.1587 3.0006 15.75" stroke="#756C65" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+            <input type="text" value="Alex Morgan" class="input-text">
+          </div>
+        </div>
+
+        <!-- Field: No Meja -->
+        <div class="form-field">
+          <label class="field-label">No Meja</label>
+          <div class="input-container input-readonly">
+            <svg class="input-icon" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M15.75 12H13.5C13.1022 12 12.7206 12.158 12.4393 12.4393C12.158 12.7206 12 13.1022 12 13.5V15.75M15.75 15.75V15.7575M9 5.25V7.5C9 7.89782 8.84196 8.27936 8.56066 8.56066C8.27936 8.84196 7.89782 9 7.5 9H5.25M2.25 9H2.2575M9 2.25H9.0075M9 12V12.0075M12 9H12.75M15.75 9V9.0075M9 15.75V15M3 2.25H5.25C5.66421 2.25 6 2.58579 6 3V5.25C6 5.66421 5.66421 6 5.25 6H3C2.58579 6 2.25 5.66421 2.25 5.25V3C2.25 2.58579 2.58579 2.25 3 2.25ZM12.75 2.25H15C15.4142 2.25 15.75 2.58579 15.75 3V5.25C15.75 5.66421 15.4142 6 15 6H12.75C12.3358 6 12 5.66421 12 5.25V3C12 2.58579 12.3358 2.25 12.75 2.25ZM3 12H5.25C5.66421 12 6 12.3358 6 12.75V15C6 15.4142 5.66421 15.75 5.25 15.75H3C2.58579 15.75 2.25 15.4142 2.25 15V12.75C2.25 12.3358 2.58579 12 3 12Z" stroke="#756C65" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+            <input type="text" value="Meja 08" class="input-text" readonly>
+          </div>
+        </div>
+
+      </form>
+
+      <!-- Table Verification Note -->
+      <div class="table-note">
+        <svg class="note-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M7.4998 10L9.1666 11.6668L12.5002 8.33322M18.334 10C18.334 14.6028 14.4027 18.334 10 18.334C5.39726 18.334 1.666 14.6028 1.666 10C1.666 5.39727 5.39726 1.66602 10 1.66602C14.4027 1.66602 18.334 5.39727 18.334 10Z" stroke="#4A2C2A" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+        <span class="note-text">Meja terverifikasi, anda dapat melanjutkan pesanan</span>
+      </div>
+
+      <!-- Actions Section -->
+      <div class="verification-action">
+        <button type="button" class="primary-button">
+          <span class="button-text">Verifikasi Saya</span>
+        </button>
+        <span class="disclaimer-text">Data hanya untuk pemesanan, bukan untuk tujuan lain.</span>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
