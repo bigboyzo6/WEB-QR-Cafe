@@ -1,0 +1,422 @@
+/* ==========================================================================
+   1. RESET & BASE STYLES
+   ========================================================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: #F8F6F4;
+  color: #4A2C2A;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 0;
+}
+
+/* Container utama berukuran mobile/responsive */
+.welcome-container,
+.login-container,
+.menu-catalog,
+.product-customization-sheet,
+.seat-and-outlet-map,
+.checkout-container,
+.order-confirmation {
+  width: 100%;
+  max-width: 430px;
+  background-color: #FFFFFF;
+  min-height: 100vh;
+  padding: 20px;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+}
+
+/* ==========================================================================
+   2. HEADER & BRANDING
+   ========================================================================== */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.brand-title,
+.brand-text {
+  font-size: 18px;
+  font-weight: 700;
+  color: #4A2C2A;
+}
+
+.table-badge {
+  background-color: #F2ECE7;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  color: #4A2C2A;
+}
+
+/* ==========================================================================
+   3. INTRODUCTION & HEADING
+   ========================================================================== */
+.introduction {
+  margin-bottom: 20px;
+}
+
+.intro-title,
+.intro-heading {
+  font-size: 22px;
+  font-weight: 700;
+  color: #4A2C2A;
+  margin-bottom: 4px;
+  display: block;
+}
+
+.intro-subtitle,
+.intro-subheading {
+  font-size: 14px;
+  font-weight: 400;
+  color: #756C65;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* ==========================================================================
+   4. FILTER TAGS & CATEGORIES
+   ========================================================================== */
+.dietary-filters {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.dietary-tag {
+  background-color: #F8F6F4;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #756C65;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.dietary-tag.active {
+  background-color: #4A2C2A;
+  color: #FFFFFF;
+}
+
+/* ==========================================================================
+   5. MENU CATALOG & PRODUCT CARDS
+   ========================================================================== */
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.heading-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #4A2C2A;
+  margin: 0;
+}
+
+.heading-count {
+  font-size: 13px;
+  color: #756C65;
+}
+
+.product-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.product-row {
+  display: flex;
+  gap: 16px;
+}
+
+.product-card {
+  flex: 1;
+  background-color: #FFFFFF;
+  border: 1px solid #EFEAE6;
+  border-radius: 16px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.product-image {
+  width: 100%;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 8px;
+}
+
+.product-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #4A2C2A;
+  display: block;
+}
+
+.product-desc {
+  font-size: 12px;
+  color: #756C65;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.purchase-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product-price {
+  font-size: 14px;
+  font-weight: 700;
+  color: #4A2C2A;
+}
+
+.add-btn {
+  background-color: #4A2C2A;
+  color: #FFFFFF;
+  padding: 6px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* ==========================================================================
+   6. SEAT & OUTLET MAP (FLOORPLAN)
+   ========================================================================== */
+.map-legend {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+  font-size: 12px;
+  color: #756C65;
+  align-items: center;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.legend-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.available-dot { background-color: #66B715; }
+.occupied-dot { background-color: #D93838; }
+
+.floorplan {
+  background-color: #F8F6F4;
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.coffee-bar {
+  background-color: #E6DFD8;
+  padding: 10px;
+  text-align: center;
+  border-radius: 8px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #756C65;
+  margin-bottom: 24px;
+}
+
+.table-row {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.cafe-table {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.table-select {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.table-select.available { background-color: #E2F3D4; color: #38660C; }
+.table-select.occupied { background-color: #FCDCDC; color: #9E1F1F; }
+.table-select.selected { background-color: #4A2C2A; color: #FFFFFF; }
+
+.chair {
+  width: 6px;
+  height: 18px;
+  background-color: #D3C9BE;
+  border-radius: 3px;
+  display: inline-block;
+}
+
+.entrance-text {
+  display: block;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 700;
+  color: #A39990;
+  margin-top: 16px;
+}
+
+/* ==========================================================================
+   7. RECEIPT & ORDER CONFIRMATION
+   ========================================================================== */
+.order-success {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.success-icon {
+  margin-bottom: 12px;
+}
+
+.success-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #4A2C2A;
+  margin-bottom: 4px;
+}
+
+.success-subtitle {
+  font-size: 13px;
+  color: #756C65;
+}
+
+.receipt {
+  background-color: #F8F6F4;
+  border-radius: 16px;
+  padding: 16px;
+  margin-bottom: 20px;
+}
+
+.receipt-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.receipt-title {
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.order-id {
+  font-size: 12px;
+  color: #756C65;
+  display: block;
+}
+
+.divider {
+  height: 1px;
+  background-color: #E6DFD8;
+  margin: 12px 0;
+}
+
+.price-line {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.total-label { font-weight: 700; font-size: 15px; }
+.total-value { font-weight: 700; font-size: 15px; color: #4A2C2A; }
+
+.preparation-note {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #FFF9F2;
+  border: 1px solid #FFE2C2;
+  padding: 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  color: #8A5A2B;
+  margin-bottom: 20px;
+}
+
+/* ==========================================================================
+   8. BUTTONS & NAVIGATION BAR
+   ========================================================================== */
+.primary-action,
+.submit-btn {
+  width: 100%;
+  background-color: #4A2C2A;
+  color: #FFFFFF;
+  border: none;
+  padding: 14px;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  margin-top: auto;
+}
+
+.navigation-bar {
+  position: sticky;
+  bottom: 0;
+  background-color: #FFFFFF;
+  border-top: 1px solid #EFEAE6;
+  display: flex;
+  justify-content: space-around;
+  padding: 12px 0;
+  margin-top: auto;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  color: #756C65;
+  cursor: pointer;
+}
+
+.nav-item.active {
+  color: #4A2C2A;
+  font-weight: 700;
+}
