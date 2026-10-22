@@ -1,137 +1,133 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>QR-Cafe Catalog</title>
-  <link rel="stylesheet" href="style.css">
-  <!-- Menggunakan Font Inter dari Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
-</head>
-<body>
-
-  <div class="menu-catalog">
-    <div class="menu-content">
-      
-      <!-- Header Section -->
-      <header class="header">
-        <div class="brand">
-          <svg class="coffee-mark" width="26" height="18" viewBox="0 0 26 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Logo Coffee Mark">
-            <path d="M1.36816 1.00043H20.5264C21.7127 1.00044 22.8505 1.47121 23.6895 2.31C24.5284 3.14898 25 4.28757 25 5.47406C24.9999 6.66043 24.5283 7.79825 23.6895 8.63715C22.8505 9.47602 21.7128 9.94768 20.5264 9.94769H18.1582V12.3159C18.1582 13.5023 17.6865 14.64 16.8477 15.4789C16.0088 16.3178 14.8709 16.7894 13.6846 16.7895H5.47363C4.28716 16.7895 3.14951 16.3179 2.31055 15.4789C1.47158 14.64 1.00001 13.5023 1 12.3159V1.36859C1 1.27098 1.03846 1.17692 1.10785 1.10785C1.17645 1.03882 1.27055 1.0005 1.36816 1.00043Z" stroke="#4A2C2A" stroke-width="2" stroke-linecap="round"/>
+<div data-layer="Menu catalog" class="MenuCatalog" style="width: 390px; height: 844px; padding-top: 40px; padding-bottom: 24px; padding-left: 24px; padding-right: 24px; background: #FDFBF7; overflow: hidden; flex-direction: column; justify-content: space-between; align-items: flex-start; display: inline-flex">
+  <div data-layer="Menu content" class="MenuContent" style="align-self: stretch; overflow: hidden; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 16px; display: flex">
+    <div data-layer="Header" class="Header" style="align-self: stretch; height: 40px; overflow: hidden; justify-content: space-between; align-items: center; display: inline-flex">
+      <div data-layer="Brand" class="Brand" style="overflow: hidden; justify-content: flex-start; align-items: center; gap: 8px; display: flex">
+        <div data-svg-wrapper data-layer="Coffee mark" class="CoffeeMark">
+          <svg width="26" height="18" viewBox="0 0 26 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <mask id="stroke0_13_2439" fill="white">
+          <path d="M19.1579 10.9474V12.3158C19.1579 13.7675 18.5812 15.1598 17.5547 16.1863C16.5282 17.2128 15.1359 17.7895 13.6842 17.7895H5.47368C4.02197 17.7895 2.62972 17.2128 1.6032 16.1863C0.57669 15.1598 0 13.7675 0 12.3158V1.36844C0 1.00551 0.144172 0.657447 0.400801 0.400818C0.65743 0.144189 1.00549 1.62125e-05 1.36842 1.62125e-05H17.7895H20.5263C21.978 1.62125e-05 23.3703 0.576706 24.3968 1.60322C25.4233 2.62974 26 4.02199 26 5.4737C26 6.92541 25.4233 8.31767 24.3968 9.34418C23.3703 10.3707 21.978 10.9474 20.5263 10.9474H19.1579Z"/>
+          </mask>
+          <path d="M10.5789 -8.21051C10.5789 -8.7628 10.1312 -9.21051 9.57895 -9.21051C9.02666 -9.21051 8.57895 -8.7628 8.57895 -8.21051H9.57895H10.5789ZM8.57895 -5.47367C8.57895 -4.92138 9.02666 -4.47367 9.57895 -4.47367C10.1312 -4.47367 10.5789 -4.92138 10.5789 -5.47367H9.57895H8.57895ZM16.0526 -8.21051C16.0526 -8.7628 15.6049 -9.21051 15.0526 -9.21051C14.5003 -9.21051 14.0526 -8.7628 14.0526 -8.21051H15.0526H16.0526ZM14.0526 -5.47367C14.0526 -4.92138 14.5003 -4.47367 15.0526 -4.47367C15.6049 -4.47367 16.0526 -4.92138 16.0526 -5.47367H15.0526H14.0526ZM17.7895 -0.999984C17.2372 -0.999984 16.7895 -0.552269 16.7895 1.62125e-05C16.7895 0.552301 17.2372 1.00002 17.7895 1.00002V1.62125e-05V-0.999984ZM18.7571 0.400818L19.4642 -0.306288L19.4642 -0.30629L18.7571 0.400818ZM18.1579 10.9474C18.1579 11.4997 18.6056 11.9474 19.1579 11.9474C19.7102 11.9474 20.1579 11.4997 20.1579 10.9474H19.1579H18.1579ZM5.10526 -8.21051C5.10526 -8.7628 4.65755 -9.21051 4.10526 -9.21051C3.55298 -9.21051 3.10526 -8.7628 3.10526 -8.21051H4.10526H5.10526ZM3.10526 -5.47367C3.10526 -4.92138 3.55298 -4.47367 4.10526 -4.47367C4.65755 -4.47367 5.10526 -4.92138 5.10526 -5.47367H4.10526H3.10526ZM9.57895 -8.21051H8.57895V-5.47367H9.57895H10.5789V-8.21051H9.57895ZM15.0526 -8.21051H14.0526V-5.47367H15.0526H16.0526V-8.21051H15.0526ZM17.7895 1.62125e-05V1.00002C17.8872 1.00002 17.9809 1.03883 18.05 1.10793L18.7571 0.400818L19.4642 -0.30629C19.02 -0.750454 18.4176 -0.999984 17.7895 -0.999984V1.62125e-05ZM18.7571 0.400818L18.05 1.10792C18.1191 1.17701 18.1579 1.27072 18.1579 1.36844H19.1579H20.1579C20.1579 0.740295 19.9084 0.137879 19.4642 -0.306288L18.7571 0.400818ZM19.1579 1.36844H18.1579V10.9474H19.1579H20.1579V1.36844H19.1579ZM4.10526 -8.21051H3.10526V-5.47367H4.10526H5.10526V-8.21051H4.10526ZM19.1579 10.9474V8.94738H17.1579V10.9474H19.1579ZM1.6032 16.1863L0.18899 17.6005L0.188992 17.6005L1.6032 16.1863ZM0.400801 0.400818L-1.01341 -1.01339V-1.01339L0.400801 0.400818ZM24.3968 1.60322L25.811 0.189008L25.811 0.189007L24.3968 1.60322ZM19.1579 10.9474H17.1579V12.3158H19.1579H21.1579V10.9474H19.1579ZM19.1579 12.3158H17.1579C17.1579 13.2371 16.7919 14.1206 16.1405 14.7721L17.5547 16.1863L18.9689 17.6005C20.3705 16.1989 21.1579 14.2979 21.1579 12.3158H19.1579ZM17.5547 16.1863L16.1405 14.7721C15.489 15.4235 14.6055 15.7895 13.6842 15.7895V17.7895V19.7895C15.6664 19.7895 17.5673 19.0021 18.9689 17.6005L17.5547 16.1863ZM13.6842 17.7895V15.7895H5.47368V17.7895V19.7895H13.6842V17.7895ZM5.47368 17.7895V15.7895C4.55241 15.7895 3.66886 15.4235 3.01742 14.7721L1.6032 16.1863L0.188992 17.6005C1.59058 19.0021 3.49154 19.7895 5.47368 19.7895V17.7895ZM1.6032 16.1863L3.01742 14.7721C2.36598 14.1206 2 13.2371 2 12.3158H0H-2C-2 14.298 -1.2126 16.1989 0.18899 17.6005L1.6032 16.1863ZM0 12.3158H2V1.36844H0H-2V12.3158H0ZM0 1.36844H2C2 1.53594 1.93346 1.69659 1.81502 1.81503L0.400801 0.400818L-1.01341 -1.01339C-1.64511 -0.381694 -2 0.475075 -2 1.36844H0ZM0.400801 0.400818L1.81502 1.81503C1.69657 1.93347 1.53593 2.00002 1.36842 2.00002V1.62125e-05V-1.99998C0.47506 -1.99998 -0.381712 -1.6451 -1.01341 -1.01339L0.400801 0.400818ZM1.36842 1.62125e-05V2.00002H17.7895V1.62125e-05V-1.99998H1.36842V1.62125e-05ZM17.7895 1.62125e-05V2.00002H20.5263V1.62125e-05V-1.99998H17.7895V1.62125e-05ZM20.5263 1.62125e-05V2.00002C21.4476 2.00002 22.3311 2.36599 22.9826 3.01744L24.3968 1.60322L25.811 0.189007C24.4094 -1.21258 22.5085 -1.99998 20.5263 -1.99998V1.62125e-05ZM24.3968 1.60322L22.9826 3.01743C23.634 3.66888 24 4.55242 24 5.4737H26H28C28 3.49156 27.2126 1.5906 25.811 0.189008L24.3968 1.60322ZM26 5.4737H24C24 6.39498 23.634 7.27852 22.9826 7.92997L24.3968 9.34418L25.811 10.7584C27.2126 9.35681 28 7.45585 28 5.4737H26ZM24.3968 9.34418L22.9826 7.92997C22.3311 8.58141 21.4476 8.94738 20.5263 8.94738V10.9474V12.9474C22.5085 12.9474 24.4094 12.16 25.811 10.7584L24.3968 9.34418ZM20.5263 10.9474V8.94738H19.1579V10.9474V12.9474H20.5263V10.9474Z" fill="#4A2C2A" mask="url(#stroke0_13_2439)"/>
           </svg>
-          <span class="brand-title">QR-Cafe</span>
         </div>
-        <div class="table-badge">
-          <span class="table-number">08</span>
-        </div>
-      </header>
-
-      <!-- Introduction Section -->
-      <div class="introduction">
-        <span class="intro-title">Table 08</span>
-        <h1 class="intro-subtitle">Menu favoritmu, dibuat saat dipesan.</h1>
+        <div data-layer="App logo" class="AppLogo" style="color: #4A2C2A; font-size: 22px; font-family: Inter; font-weight: 700; word-wrap: break-word">QR-Cafe</div>
       </div>
-
-      <!-- Dietary Filters Section -->
-      <div class="dietary-filters">
-        <div class="dietary-tag active">
-          <span class="tag-text">All</span>
-        </div>
-        <div class="dietary-tag">
-          <span class="tag-text">Coffee</span>
-        </div>
-        <div class="dietary-tag">
-          <span class="tag-text">Non-Coffee</span>
-        </div>
-        <div class="dietary-tag">
-          <span class="tag-text">Pastry</span>
-        </div>
+      <div data-layer="Table badge" class="TableBadge" style="padding: 8px; background: #F3EEE7; overflow: hidden; border-radius: 8px; justify-content: flex-start; align-items: flex-start; display: flex">
+        <div data-layer="Table" class="Table" style="color: #4A2C2A; font-size: 12px; font-family: Inter; font-weight: 600; word-wrap: break-word">08</div>
       </div>
-
-      <!-- Menu Selection Section -->
-      <section class="menu-selection">
-        <div class="section-heading">
-          <h2 class="heading-title">Menu Favorit</h2>
-          <span class="heading-count">4 items</span>
-        </div>
-
-        <!-- Product Grid -->
-        <div class="product-grid">
-          
-          <!-- Row 1 -->
-          <div class="product-row">
-            <!-- Product 1 -->
-            <div class="product-card">
-              <img class="product-image" src="Assets/flat-white.png" alt="Flat White">
-              <div class="product-info">
-                <span class="product-title">Flat White</span>
-                <span class="product-desc">Espresso dengan milk foam yang lembut.</span>
-                <div class="purchase-row">
-                  <span class="product-price">Rp 28.000</span>
-                  <a href="productcostumization.html" class="add-btn" style="text-decoration: none;">
-                    <span class="add-btn-text">+ Add</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <!-- Product 2 -->
-            <div class="product-card">
-              <img class="product-image" src="Assets/banana-bread.png" alt="Banana Bread">
-              <div class="product-info">
-                <span class="product-title">Banana Bread</span>
-                <span class="product-desc">Roti pisang lembut khas QR-Cafe.</span>
-                <div class="purchase-row">
-                  <span class="product-price">Rp 22.000</span>
-                  <a href="productcostumization.html" class="add-btn" style="text-decoration: none;">
-                    <span class="add-btn-text">+ Add</span>
-                  </a>
+    </div>
+    <div data-layer="Introduction" class="Introduction" style="align-self: stretch; overflow: hidden; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 8px; display: flex">
+      <div data-layer="Title" class="Title" style="align-self: stretch; color: #1A1A1A; font-size: 28px; font-family: Inter; font-weight: 600; line-height: 36px; word-wrap: break-word">Table</div>
+      <div data-layer="Description" class="Description" style="align-self: stretch; color: #756C65; font-size: 14px; font-family: Inter; font-weight: 400; line-height: 22px; word-wrap: break-word">Menu favoritmu, dibuat saat dipesan.</div>
+    </div>
+    <div data-layer="Dietary filters" class="DietaryFilters" style="align-self: stretch; overflow: hidden; justify-content: flex-start; align-items: flex-start; gap: 8px; display: inline-flex">
+      <div data-layer="Dietary tag" class="DietaryTag" style="height: 32px; padding-left: 16px; padding-right: 16px; background: #4A2C2A; overflow: hidden; border-radius: 100px; justify-content: flex-start; align-items: center; display: flex">
+        <div data-layer="Tag label" class="TagLabel" style="color: #FDFBF7; font-size: 12px; font-family: Inter; font-weight: 500; word-wrap: break-word">All</div>
+      </div>
+      <div data-layer="Dietary tag" class="DietaryTag" style="height: 32px; padding-left: 16px; padding-right: 16px; background: #F3EEE7; overflow: hidden; border-radius: 100px; justify-content: flex-start; align-items: center; display: flex">
+        <div data-layer="Tag label" class="TagLabel" style="color: #4A2C2A; font-size: 12px; font-family: Inter; font-weight: 500; word-wrap: break-word">Vegetarian</div>
+      </div>
+      <div data-layer="Dietary tag" class="DietaryTag" style="height: 32px; padding-left: 16px; padding-right: 16px; background: #F3EEE7; overflow: hidden; border-radius: 100px; justify-content: flex-start; align-items: center; display: flex">
+        <div data-layer="Tag label" class="TagLabel" style="color: #4A2C2A; font-size: 12px; font-family: Inter; font-weight: 500; word-wrap: break-word">Dairy-free</div>
+      </div>
+    </div>
+    <div data-layer="Menu selection" class="MenuSelection" style="align-self: stretch; overflow: hidden; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 12px; display: flex">
+      <div data-layer="Section heading" class="SectionHeading" style="align-self: stretch; overflow: hidden; justify-content: space-between; align-items: flex-start; display: inline-flex">
+        <div data-layer="Title" class="Title" style="color: #1A1A1A; font-size: 18px; font-family: Inter; font-weight: 600; word-wrap: break-word">Menu Favorit</div>
+        <div data-layer="Count" class="Count" style="color: #756C65; font-size: 12px; font-family: Inter; font-weight: 400; word-wrap: break-word">4 items</div>
+      </div>
+      <div data-layer="Product grid" class="ProductGrid" style="align-self: stretch; overflow: hidden; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 16px; display: flex">
+        <div data-layer="Product row" class="ProductRow" style="align-self: stretch; overflow: hidden; justify-content: flex-start; align-items: flex-start; gap: 16px; display: inline-flex">
+          <div data-layer="Product card" class="ProductCard" style="flex: 1 1 0; background: white; overflow: hidden; border-radius: 16px; outline: 1px #E7DFD6 solid; outline-offset: -1px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex">
+            <img data-layer="Product photograph" class="ProductPhotograph" style="align-self: stretch; height: 112px" src="https://placehold.co/163x112" />
+            <div data-layer="Product information" class="ProductInformation" style="align-self: stretch; padding: 12px; overflow: hidden; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 8px; display: flex">
+              <div data-layer="Product name" class="ProductName" style="align-self: stretch; color: #1A1A1A; font-size: 13px; font-family: Inter; font-weight: 600; word-wrap: break-word">Flat White</div>
+              <div data-layer="Dietary detail" class="DietaryDetail" style="color: #756C65; font-size: 10px; font-family: Inter; font-weight: 400; word-wrap: break-word">Pilihan Barista</div>
+              <div data-layer="Purchase row" class="PurchaseRow" style="align-self: stretch; overflow: hidden; justify-content: space-between; align-items: center; display: inline-flex">
+                <div data-layer="Price" class="Price" style="color: #1A1A1A; font-size: 14px; font-family: Inter; font-weight: 600; word-wrap: break-word">$4.50</div>
+                <div data-layer="Add action" class="AddAction" style="height: 32px; padding-left: 10px; padding-right: 10px; background: #4A2C2A; overflow: hidden; border-radius: 8px; justify-content: center; align-items: center; display: flex">
+                  <div data-layer="Action label" class="ActionLabel" style="color: #FDFBF7; font-size: 12px; font-family: Inter; font-weight: 600; word-wrap: break-word">+ Add</div>
                 </div>
               </div>
             </div>
           </div>
-
-          <!-- Row 2 -->
-          <div class="product-row">
-            <!-- Product 3 -->
-            <div class="product-card">
-              <img class="product-image" src="Assets/almond-croissant.png" alt="Almond Croissant">
-              <div class="product-info">
-                <span class="product-title">Almond Croissant</span>
-                <span class="product-desc">Pastry renyah dengan isian krim almond.</span>
-                <div class="purchase-row">
-                  <span class="product-price">Rp 25.000</span>
-                  <a href="productcostumization.html" class="add-btn" style="text-decoration: none;">
-                    <span class="add-btn-text">+ Add</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <!-- Product 4 -->
-            <div class="product-card">
-              <img class="product-image" src="Assets/hot-chocolate.png" alt="Hot Chocolate">
-              <div class="product-info">
-                <span class="product-title">Hot Chocolate</span>
-                <span class="product-desc">Cokelat hangat premium dengan rasa manis yang pas.</span>
-                <div class="purchase-row">
-                  <span class="product-price">Rp 30.000</span>
-                  <a href="productcostumization.html" class="add-btn" style="text-decoration: none;">
-                    <span class="add-btn-text">+ Add</span>
-                  </a>
+          <div data-layer="Product card" class="ProductCard" style="flex: 1 1 0; background: white; overflow: hidden; border-radius: 16px; outline: 1px #E7DFD6 solid; outline-offset: -1px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex">
+            <img data-layer="Product photograph" class="ProductPhotograph" style="align-self: stretch; height: 112px" src="https://placehold.co/163x112" />
+            <div data-layer="Product information" class="ProductInformation" style="align-self: stretch; padding: 12px; overflow: hidden; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 8px; display: flex">
+              <div data-layer="Product name" class="ProductName" style="align-self: stretch; color: #1A1A1A; font-size: 13px; font-family: Inter; font-weight: 600; word-wrap: break-word">Banana Bread</div>
+              <div data-layer="Dietary detail" class="DietaryDetail" style="color: #756C65; font-size: 10px; font-family: Inter; font-weight: 400; word-wrap: break-word">Vegetarian</div>
+              <div data-layer="Purchase row" class="PurchaseRow" style="align-self: stretch; overflow: hidden; justify-content: space-between; align-items: center; display: inline-flex">
+                <div data-layer="Price" class="Price" style="color: #1A1A1A; font-size: 14px; font-family: Inter; font-weight: 600; word-wrap: break-word">$3.20</div>
+                <div data-layer="Add action" class="AddAction" style="height: 32px; padding-left: 10px; padding-right: 10px; background: #4A2C2A; overflow: hidden; border-radius: 8px; justify-content: center; align-items: center; display: flex">
+                  <div data-layer="Action label" class="ActionLabel" style="color: #FDFBF7; font-size: 12px; font-family: Inter; font-weight: 600; word-wrap: break-word">+ Add</div>
                 </div>
               </div>
             </div>
           </div>
-
         </div>
-      </section>
-
+        <div data-layer="Product row" class="ProductRow" style="align-self: stretch; overflow: hidden; justify-content: flex-start; align-items: flex-start; gap: 16px; display: inline-flex">
+          <div data-layer="Product card" class="ProductCard" style="flex: 1 1 0; background: white; overflow: hidden; border-radius: 16px; outline: 1px #E7DFD6 solid; outline-offset: -1px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex">
+            <img data-layer="Product photograph" class="ProductPhotograph" style="align-self: stretch; height: 112px" src="https://placehold.co/163x112" />
+            <div data-layer="Product information" class="ProductInformation" style="align-self: stretch; padding: 12px; overflow: hidden; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 8px; display: flex">
+              <div data-layer="Product name" class="ProductName" style="align-self: stretch; color: #1A1A1A; font-size: 13px; font-family: Inter; font-weight: 600; word-wrap: break-word">Almond Croissant</div>
+              <div data-layer="Dietary detail" class="DietaryDetail" style="color: #756C65; font-size: 10px; font-family: Inter; font-weight: 400; word-wrap: break-word">Mengandung kacang</div>
+              <div data-layer="Purchase row" class="PurchaseRow" style="align-self: stretch; overflow: hidden; justify-content: space-between; align-items: center; display: inline-flex">
+                <div data-layer="Price" class="Price" style="color: #1A1A1A; font-size: 14px; font-family: Inter; font-weight: 600; word-wrap: break-word">$2.75</div>
+                <div data-layer="Add action" class="AddAction" style="height: 32px; padding-left: 10px; padding-right: 10px; background: #4A2C2A; overflow: hidden; border-radius: 8px; justify-content: center; align-items: center; display: flex">
+                  <div data-layer="Action label" class="ActionLabel" style="color: #FDFBF7; font-size: 12px; font-family: Inter; font-weight: 600; word-wrap: break-word">+ Add</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div data-layer="Product card" class="ProductCard" style="flex: 1 1 0; background: white; overflow: hidden; border-radius: 16px; outline: 1px #E7DFD6 solid; outline-offset: -1px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex">
+            <img data-layer="Product photograph" class="ProductPhotograph" style="align-self: stretch; height: 112px" src="https://placehold.co/163x112" />
+            <div data-layer="Product information" class="ProductInformation" style="align-self: stretch; padding: 12px; overflow: hidden; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 8px; display: flex">
+              <div data-layer="Product name" class="ProductName" style="align-self: stretch; color: #1A1A1A; font-size: 13px; font-family: Inter; font-weight: 600; word-wrap: break-word">Hot Chocolate</div>
+              <div data-layer="Dietary detail" class="DietaryDetail" style="color: #756C65; font-size: 10px; font-family: Inter; font-weight: 400; word-wrap: break-word">Caffeine-free</div>
+              <div data-layer="Purchase row" class="PurchaseRow" style="align-self: stretch; overflow: hidden; justify-content: space-between; align-items: center; display: inline-flex">
+                <div data-layer="Price" class="Price" style="color: #1A1A1A; font-size: 14px; font-family: Inter; font-weight: 600; word-wrap: break-word">$3.00</div>
+                <div data-layer="Add action" class="AddAction" style="height: 32px; padding-left: 10px; padding-right: 10px; background: #4A2C2A; overflow: hidden; border-radius: 8px; justify-content: center; align-items: center; display: flex">
+                  <div data-layer="Action label" class="ActionLabel" style="color: #FDFBF7; font-size: 12px; font-family: Inter; font-weight: 600; word-wrap: break-word">+ Add</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-
-  <script src="app.js"></script>
-</body>
-</html>
+  <div data-layer="Navigation" class="Navigation" style="align-self: stretch; height: 64px; padding-top: 16px; padding-left: 16px; padding-right: 16px; overflow: hidden; border-top: 1px #E7DFD6 solid; justify-content: space-between; align-items: flex-start; display: inline-flex">
+    <div data-layer="Navigation item" class="NavigationItem" style="width: 56px; overflow: hidden; flex-direction: column; justify-content: flex-start; align-items: center; gap: 4px; display: inline-flex">
+      <div data-svg-wrapper data-layer="house" class="House" style="position: relative">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12.5 17.4993V10.8327C12.5 10.6117 12.4122 10.3997 12.2559 10.2434C12.0996 10.0871 11.8877 9.99935 11.6667 9.99935H8.33333C8.11232 9.99935 7.90036 10.0871 7.74408 10.2434C7.5878 10.3997 7.5 10.6117 7.5 10.8327V17.4993M2.5 8.33308C2.49994 8.09064 2.55278 7.8511 2.65482 7.63118C2.75687 7.41126 2.90566 7.21625 3.09083 7.05975L8.92417 2.05975C9.22499 1.80551 9.60613 1.66602 10 1.66602C10.3939 1.66602 10.775 1.80551 11.0758 2.05975L16.9092 7.05975C17.0943 7.21625 17.2431 7.41126 17.3452 7.63118C17.4472 7.8511 17.5001 8.09064 17.5 8.33308V15.8331C17.5 16.2751 17.3244 16.699 17.0118 17.0116C16.6993 17.3242 16.2754 17.4997 15.8333 17.4997H4.16667C3.72464 17.4997 3.30072 17.3242 2.98816 17.0116C2.67559 16.699 2.5 16.2751 2.5 15.8331V8.33308Z" stroke-width="1.8" stroke-linecap="round" stroke="#756C65"/>
+        </svg>
+      </div>
+      <div data-layer="Label" class="Label" style="color: #756C65; font-size: 11px; font-family: Inter; font-weight: 400; word-wrap: break-word">Home</div>
+    </div>
+    <div data-layer="Navigation item" class="NavigationItem" style="width: 56px; overflow: hidden; flex-direction: column; justify-content: flex-start; align-items: center; gap: 4px; display: inline-flex">
+      <div data-svg-wrapper data-layer="coffee" class="Coffee" style="position: relative">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M8.33333 1.66602V3.33268M11.6667 1.66602V3.33268M13.3333 6.66602C13.5543 6.66602 13.7663 6.75381 13.9226 6.91009C14.0789 7.06637 14.1667 7.27834 14.1667 7.49935V13.3327M13.3333 6.66602H3.33333C3.11232 6.66602 2.90036 6.75381 2.74408 6.91009C2.5878 7.06637 2.5 7.27834 2.5 7.49935V14.166C2.5 15.0501 2.85119 15.8979 3.47631 16.523C4.10143 17.1482 4.94928 17.4993 5.83333 17.4993H10.8333C11.7174 17.4993 12.5652 17.1482 13.1904 16.523C13.8155 15.8979 14.1667 15.0501 14.1667 14.166V13.3327M13.3333 6.66602H15C15.8841 6.66602 16.7319 7.0172 17.357 7.64233C17.9821 8.26745 18.3333 9.11529 18.3333 9.99935C18.3333 10.8834 17.9821 11.7312 17.357 12.3564C16.7319 12.9815 15.8841 13.3327 15 13.3327H14.1667M5 1.66602V3.33268" stroke-width="1.8" stroke-linecap="round" stroke="#4A2C2A"/>
+        </svg>
+      </div>
+      <div data-layer="Label" class="Label" style="color: #4A2C2A; font-size: 11px; font-family: Inter; font-weight: 700; word-wrap: break-word">Menu</div>
+    </div>
+    <div data-layer="Navigation item" class="NavigationItem" style="width: 56px; overflow: hidden; flex-direction: column; justify-content: flex-start; align-items: center; gap: 4px; display: inline-flex">
+      <div data-svg-wrapper data-layer="armchair" class="Armchair" style="position: relative">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M15.8333 7.50023V5.00048C15.8333 4.5585 15.6577 4.13462 15.3452 3.82209C15.0326 3.50956 14.6087 3.33398 14.1667 3.33398H5.83333C5.39131 3.33398 4.96738 3.50956 4.65482 3.82209C4.34226 4.13462 4.16667 4.5585 4.16667 5.00048V7.50023M15.8333 7.50023C16.2754 7.50023 16.6993 7.67581 17.0118 7.98834C17.3244 8.30087 17.5 8.72475 17.5 9.16673V13.333C17.5 13.775 17.3244 14.1988 17.0118 14.5114C16.6993 14.8239 16.2754 14.9995 15.8333 14.9995M15.8333 7.50023C15.3913 7.50023 14.9674 7.67581 14.6548 7.98834C14.3423 8.30087 14.1667 8.72475 14.1667 9.16673V10.4166C14.1667 10.5271 14.1228 10.6331 14.0446 10.7112C13.9665 10.7893 13.8605 10.8332 13.75 10.8332H6.25C6.13949 10.8332 6.03351 10.7893 5.95537 10.7112C5.87723 10.6331 5.83333 10.5271 5.83333 10.4166V9.16673C5.83333 8.72475 5.65774 8.30087 5.34518 7.98834C5.03262 7.67581 4.60869 7.50023 4.16667 7.50023M4.16667 7.50023C3.72464 7.50023 3.30072 7.67581 2.98816 7.98834C2.67559 8.30087 2.5 8.72475 2.5 9.16673V13.333C2.5 13.775 2.67559 14.1988 2.98816 14.5114C3.30072 14.8239 3.72464 14.9995 4.16667 14.9995M15.8333 14.9995H4.16667M15.8333 14.9995V16.666M4.16667 14.9995V16.666" stroke-width="1.8" stroke-linecap="round" stroke="#756C65"/>
+        </svg>
+      </div>
+      <div data-layer="Label" class="Label" style="color: #756C65; font-size: 11px; font-family: Inter; font-weight: 400; word-wrap: break-word">Meja</div>
+    </div>
+    <div data-layer="Navigation item" class="NavigationItem" style="width: 56px; overflow: hidden; flex-direction: column; justify-content: flex-start; align-items: center; gap: 4px; display: inline-flex">
+      <div data-svg-wrapper data-layer="shopping-bag" class="ShoppingBag" style="position: relative">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M13.3333 8.33322C13.3333 9.21734 12.9821 10.0653 12.357 10.6904C11.7319 11.3156 10.8841 11.6668 10 11.6668C9.11594 11.6668 8.2681 11.3156 7.64298 10.6904C7.01786 10.0653 6.66667 9.21734 6.66667 8.33322M2.58545 5.0281H2.58563M2.58563 5.0281H17.4138M2.58563 5.0281C2.64191 4.85934 2.72521 4.69958 2.83333 4.55541L4.5 2.33274C4.65525 2.12573 4.85655 1.95771 5.08798 1.84198C5.3194 1.72626 5.57459 1.66602 5.83333 1.66602H14.1667C14.4254 1.66602 14.6806 1.72626 14.912 1.84198C15.1434 1.95771 15.3448 2.12573 15.5 2.33274L17.1667 4.55541C17.383 4.84393 17.5 5.19485 17.5 5.55549V16.6672C17.5 17.1093 17.3244 17.5332 17.0118 17.8458C16.6993 18.1584 16.2754 18.334 15.8333 18.334H4.16667C3.72464 18.334 3.30072 18.1584 2.98816 17.8458C2.67559 17.5332 2.5 17.1093 2.5 16.6672V5.55549C2.5 5.37506 2.52928 5.19707 2.58563 5.0281Z" stroke-width="1.8" stroke-linecap="round" stroke="#756C65"/>
+        </svg>
+      </div>
+      <div data-layer="Label" class="Label" style="color: #756C65; font-size: 11px; font-family: Inter; font-weight: 400; word-wrap: break-word">Keranjang</div>
+    </div>
+  </div>
+</div>
