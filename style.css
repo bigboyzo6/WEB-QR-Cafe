@@ -1,0 +1,163 @@
+/* ==========================================================================
+   1. GLOBAL STYLES & RESET
+   ========================================================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: #e5e5e5; /* Background penopang luar (opsional) */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Base Frame / Container untuk setiap Layar Halaman */
+.page-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-shrink: 0;
+  width: 390px;
+  height: 844px;
+  background: #FDFBF7; /* Warna utama canvas Figma */
+}
+
+
+/* ==========================================================================
+   2. WELCOME / LANDING PAGE (layar 1)
+   ========================================================================== */
+.welcome-page {
+  padding: 64px 24px 40px 24px;
+}
+
+
+/* ==========================================================================
+   3. LOGIN & VERIFICATION PAGE (layar 2)
+   ========================================================================== */
+.login-verification-page {
+  padding: 40px 24px;
+}
+
+
+/* ==========================================================================
+   4. HOME LANDING PAGE (layar 3)
+   ========================================================================== */
+.home-landing-page {
+  padding: 40px 24px 24px 24px;
+  flex: 1 0 0;
+  align-self: stretch;
+}
+
+
+/* ==========================================================================
+   5. MENU CATALOG PAGE (layar 4)
+   ========================================================================== */
+.menu-catalog-page {
+  padding: 40px 24px;
+}
+
+
+/* ==========================================================================
+   6. PRODUCT CUSTOMIZATION SHEET (layar 5)
+   ========================================================================== */
+.product-customization-page {
+  padding: 40px 24px;
+}
+
+
+/* ==========================================================================
+   7. SEAT AND OUTLET MAP PAGE (layar 6)
+   ========================================================================== */
+.seat-outlet-map-page {
+  padding: 40px 24px;
+}
+
+
+/* ==========================================================================
+   8. CHECKOUT PAGE (layar 7)
+   ========================================================================== */
+.checkout-page {
+  padding: 40px 24px 32px 24px;
+}
+
+
+/* ==========================================================================
+   9. ORDER CONFIRMATION PAGE (layar 8)
+   ========================================================================== */
+.order-confirmation-page {
+  padding: 40px 24px;
+}
+
+
+/* ==========================================================================
+   10. COMMON REUSABLE COMPONENTS
+   ========================================================================== */
+
+/* Styling Input Form */
+.input-group {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.input-group label {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #1A1A1A;
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  background-color: #FFFFFF;
+  border: 1px solid #E5E5E5;
+  border-radius: 12px;
+  padding: 12px 16px;
+  width: 100%;
+}
+
+.input-wrapper input {
+  border: none;
+  outline: none;
+  width: 100%;
+  margin-left: 8px;
+  font-size: 14px;
+  background: transparent;
+}
+
+.input-wrapper.disabled {
+  background-color: #F2EEE9;
+  border: none;
+}
+
+/* Styling Tombol Akses Utama (Button Black) */
+.btn-primary {
+  width: 100%;
+  background-color: #121212;
+  color: #FFFFFF;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  text-align: center;
+}
+
+/* Navigation Bar Bawah (Bottom Nav) */
+.bottom-nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  padding: 12px 0;
+  background-color: #FFFFFF;
+  border-top: 1px solid #E5E5E5;
+}
