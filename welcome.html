@@ -1,30 +1,39 @@
-<div data-layer="Welcome" class="Welcome" style="width: 390px; height: 844px; padding-top: 64px; padding-bottom: 40px; padding-left: 24px; padding-right: 24px; background: #FDFBF7; overflow: hidden; flex-direction: column; justify-content: space-between; align-items: flex-start; display: inline-flex">
-  <div data-layer="Welcome content" class="WelcomeContent" style="align-self: stretch; background: white; overflow: hidden; outline: 1px black solid; outline-offset: -1px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 32px; display: flex">
-    <div data-layer="Brand" class="Brand" style="align-self: stretch; height: 40px; overflow: hidden; justify-content: center; align-items: center; gap: 8px; display: inline-flex">
-      <div data-svg-wrapper data-layer="coffee" class="Coffee" style="position: relative">
-        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M13.3333 2.66559V5.33226M18.6667 2.66559V5.33226M21.3333 10.6656C21.687 10.6656 22.0261 10.8061 22.2761 11.0561C22.5262 11.3062 22.6667 11.6453 22.6667 11.9989V21.3323M21.3333 10.6656H5.33333C4.97971 10.6656 4.64057 10.8061 4.39052 11.0561C4.14048 11.3062 4 11.6453 4 11.9989V22.6656C4 24.0801 4.5619 25.4366 5.5621 26.4368C6.56229 27.437 7.91885 27.9989 9.33333 27.9989H17.3333C18.7478 27.9989 20.1044 27.437 21.1046 26.4368C22.1048 25.4366 22.6667 24.0801 22.6667 22.6656V21.3323M21.3333 10.6656H24C25.4145 10.6656 26.771 11.2275 27.7712 12.2277C28.7714 13.2279 29.3333 14.5844 29.3333 15.9989C29.3333 17.4134 28.7714 18.77 27.7712 19.7702C26.771 20.7704 25.4145 21.3323 24 21.3323H22.6667M8 2.66559V5.33226" stroke-width="2" stroke-linecap="round" stroke="#4A2C2A"/>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QR-Cafe - Welcome</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Font Inter dari Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="welcome-container">
+    <div class="welcome-content">
+      
+      <!-- Brand Section -->
+      <div class="brand">
+        <svg class="coffee-icon" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Logo QR-Cafe">
+          <path d="M13.3333 2.66559V5.33226M18.6667 2.66559V5.33226M21.3333 10.6656C21.687 10.6654 22.0261 10.8061 22.2761 11.0561C22.5262 11.3062 22.6667 11.6453 22.6667 11.9989V22.6656C22.6667 24.0801 22.1048 25.4366 21.1046 26.4368C20.1044 27.437 18.7478 27.9989 17.3333 27.9989H9.33333C7.91885 27.9989 6.56229 27.437 5.5621 26.4368C4.5619 25.4366 4 24.0801 4 22.6656V11.9989C4 11.6453 4.14048 11.3062 4.39052 11.0561C4.64057 10.8061 4.97971 10.6654 5.33333 10.6656H24C25.4145 10.6656 26.771 11.2275 27.7712 12.2277C28.7714 13.2279 29.3333 14.5844 27.7712 19.7702C26.771 20.7704 25.4145 21.3323 24 21.3323H22.6667M8 2.66559V5.33226" stroke="#4A2C2A" stroke-width="2" stroke-linecap="round"/>
         </svg>
+        <span class="brand-text">QR-Cafe</span>
       </div>
-      <div data-layer="App logo" class="AppLogo" style="color: #4A2C2A; font-size: 28px; font-family: Inter; font-weight: 700; word-wrap: break-word">QR-Cafe</div>
-    </div>
-    <div data-layer="Cafe hero" class="CafeHero" style="align-self: stretch; height: 344px; position: relative; overflow: hidden; border-radius: 24px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
-      <img data-layer="Coffee and pastry" class="CoffeeAndPastry" style="align-self: stretch; flex: 1 1 0" src="https://placehold.co/342x344" />
-      <div data-layer="Table ordering badge" class="TableOrderingBadge" style="padding-left: 16px; padding-right: 16px; padding-top: 8px; padding-bottom: 8px; left: 16px; top: 296px; position: absolute; background: #FDFBF7; overflow: hidden; border-radius: 100px; justify-content: flex-start; align-items: center; gap: 8px; display: inline-flex">
-        <div data-svg-wrapper data-layer="qr-code" class="QrCode" style="position: relative">
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M14 10.6667H12C11.6464 10.6667 11.3072 10.8071 11.0572 11.0572C10.8071 11.3072 10.6667 11.6464 10.6667 12V14M14 14V14.0067M8 4.66667V6.66667C8 7.02029 7.85952 7.35943 7.60948 7.60948C7.35943 7.85952 7.02029 8 6.66667 8H4.66667M2 8H2.00667M8 2H8.00667M8 10.6667V10.6733M10.6667 8H11.3333M14 8V8.00667M8 14V13.3333M2.66667 2H4.66667C5.03486 2 5.33333 2.29848 5.33333 2.66667V4.66667C5.33333 5.03486 5.03486 5.33333 4.66667 5.33333H2.66667C2.29848 5.33333 2 5.03486 2 4.66667V2.66667C2 2.29848 2.29848 2 2.66667 2ZM11.3333 2H13.3333C13.7015 2 14 2.29848 14 2.66667V4.66667C14 5.03486 13.7015 5.33333 13.3333 5.33333H11.3333C10.9651 5.33333 10.6667 5.03486 10.6667 4.66667V2.66667C10.6667 2.29848 10.9651 2 11.3333 2ZM2.66667 10.6667H4.66667C5.03486 10.6667 5.33333 10.9651 5.33333 11.3333V13.3333C5.33333 13.7015 5.03486 14 4.66667 14H2.66667C2.29848 14 2 13.7015 2 13.3333V11.3333C2 10.9651 2.29848 10.6667 2.66667 10.6667Z" stroke-width="1.5" stroke-linecap="round" stroke="#4A2C2A"/>
-          </svg>
-        </div>
-        <div data-layer="Badge label" class="BadgeLabel" style="color: #4A2C2A; font-size: 12px; font-family: Inter; font-weight: 500; word-wrap: break-word">Your table. Your favorites.</div>
+
+      <!-- Hero Image Section -->
+      <div class="cafe-hero">
+        <img 
+          src="Assets/Coffee%20and%20pastry.png" 
+          alt="Coffee and Pastry" 
+          class="hero-image"
+        >
       </div>
-    </div>
-    <div data-layer="Welcome message" class="WelcomeMessage" style="align-self: stretch; overflow: hidden; flex-direction: column; justify-content: flex-start; align-items: center; gap: 16px; display: flex">
-      <div data-layer="Tagline" class="Tagline" style="align-self: stretch; text-align: center; color: #1A1A1A; font-size: 32px; font-family: Inter; font-weight: 600; line-height: 40px; word-wrap: break-word">Pesan dari mejamu melalui layanan ini</div>
-      <div data-layer="Supporting message" class="SupportingMessage" style="align-self: stretch; text-align: center; color: #756C65; font-size: 15px; font-family: Inter; font-weight: 400; line-height: 24px; word-wrap: break-word">Setelah anda memesan, kami akan mengantarkan pesanan anda.</div>
+
     </div>
   </div>
-  <div data-layer="Order button" class="OrderButton" style="align-self: stretch; height: 56px; background: #4A2C2A; overflow: hidden; border-radius: 16px; justify-content: center; align-items: center; display: inline-flex">
-    <div data-layer="Button label" class="ButtonLabel" style="color: #FDFBF7; font-size: 16px; font-family: Inter; font-weight: 600; word-wrap: break-word">Pesan</div>
-  </div>
-</div>
+
+</body>
+</html>
