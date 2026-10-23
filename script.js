@@ -8,7 +8,7 @@ function addDirect(name, price, img, desc) {
   let cart = JSON.parse(localStorage.getItem("userCart") || "[]");
   cart.push({ name, price, img, desc });
   localStorage.setItem("userCart", JSON.stringify(cart));
-  window.location.href = "index.html";
+  window.location.href = "checkout.html";
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const desc = `${selectedSugar} · ${selectedMilk}`;
         cart.push({ name: prod.name, price: finalPrice, img: prod.img, desc });
         localStorage.setItem("userCart", JSON.stringify(cart));
-        window.location.href = "index.html";
+        window.location.href = "checkout.html";
       });
     }
   }

@@ -1,101 +1,86 @@
-<div class="checkout">
-  <div class="checkout-content">
-    <div class="header">
-      <div class="back">
-        <img class="arrow-left" src="arrow-left0.svg" />
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QR-Cafe - Checkout</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="mobile-body">
+  <div class="mobile-container checkout-container">
+    <header class="top-bar">
+      <button class="back-link" onclick="history.back()">←</button>
+      <div class="brand inline">
+        <span class="logo-icon">☕</span>
+        <h2>QR-Cafe</h2>
       </div>
-      <div class="brand">
-        <img class="coffee-mark" src="coffee-mark0.svg" />
-        <div class="app-logo">QR-Cafe</div>
-      </div>
-      <div class="table-badge">
-        <div class="table">08</div>
-      </div>
-    </div>
-    <div class="checkout-heading">
-      <div class="step-heading">
-        <div class="title">Checkout</div>
-        <div class="step">1/2</div>
-      </div>
-      <div class="destination">Untuk Alex · Diantar ke Meja 08</div>
-    </div>
-    <div class="order-summary">
-      <div class="summary-heading">
-        <div class="title2">Ringkasan Pesanan</div>
-        <div class="item-count">6 items</div>
-      </div>
-      <div class="basket-items">
-        <div class="order-item">
-          <img class="product-photograph" src="product-photograph0.png" />
-          <div class="item-details">
-            <div class="quantity-and-product">1 × Flat White</div>
-            <div class="customization">Regular · almond milk</div>
-          </div>
-          <div class="item-actions">
-            <div class="line-price">$4.50</div>
-            <div class="remove-action">Remove</div>
-          </div>
-        </div>
-        <div class="order-item">
-          <img class="product-photograph" src="product-photograph1.png" />
-          <div class="item-details">
-            <div class="quantity-and-product">1 × Banana Bread</div>
-            <div class="customization">One slice · served warm</div>
-          </div>
-          <div class="item-actions">
-            <div class="line-price">$3.20</div>
-            <div class="remove-action">Remove</div>
-          </div>
-        </div>
-        <div class="order-item">
-          <img class="product-photograph" src="product-photograph2.png" />
-          <div class="item-details">
-            <div class="quantity-and-product">1 × Almond Croissant</div>
-            <div class="customization">Freshly baked</div>
-          </div>
-          <div class="item-actions">
-            <div class="line-price">$2.75</div>
-            <div class="remove-action">Remove</div>
-          </div>
-        </div>
-        <div class="order-item">
-          <img class="product-photograph" src="product-photograph3.png" />
-          <div class="item-details">
-            <div class="quantity-and-product">3 × Hot Chocolate</div>
-            <div class="customization">Regular · whole milk</div>
-          </div>
-          <div class="item-actions">
-            <div class="line-price">$9.00</div>
-            <div class="remove-action">Remove</div>
-          </div>
+    </header>
+
+    <main class="content-area">
+      <div class="checkout-header">
+        <div>
+          <h1>Checkout</h1>
+          <p class="subtitle" id="checkout-user-sub"></p>
         </div>
       </div>
-    </div>
-    <div class="promo-code">
-      <div class="label">Kode Promo</div>
-      <div class="promo-entry">
-        <div class="promo-input">
-          <div class="placeholder">Masukkan kode</div>
+
+      <div id="cart-empty" class="empty-cart-state">
+        <div class="empty-icon">🛒</div>
+        <h3>Keranjang Anda Kosong</h3>
+        <p>Isilah dengan menu kami</p>
+        <a href="menucatalog.html" class="btn btn-primary margin-top-md">Lihat Menu</a>
+      </div>
+
+      <div id="cart-content" class="cart-filled-state" style="display: none;">
+        <div class="section-header">
+          <h3>Ringkasan Pesanan</h3>
+          <span class="item-count" id="cart-item-count">1 item</span>
         </div>
-        <div class="apply-action">
-          <div class="label2">Klaim</div>
+
+        <div class="order-list" id="order-list-container"></div>
+
+        <div class="promo-section">
+          <label>Kode Promo</label>
+          <div class="promo-input">
+            <input type="text" placeholder="Masukkan kode">
+            <button class="btn-claim">Klaim</button>
+          </div>
         </div>
+
+        <div class="summary-breakdown">
+          <div class="summary-row total">
+            <span>Subtotal</span>
+            <span id="cart-subtotal">$0.00</span>
+          </div>
+        </div>
+
+        <button class="btn btn-primary btn-full flex-between-btn margin-top-lg" id="btn-checkout">
+          <span>Checkout</span>
+          <span id="checkout-total-btn">$0.00</span>
+        </button>
       </div>
-    </div>
-    <div class="order-totals">
-      <div class="price-line">
-        <div class="label3">Almond milk · Flat White</div>
-        <div class="amount">$0.55</div>
-      </div>
-      <div class="divider"></div>
-      <div class="price-line">
-        <div class="label4">Subtotal</div>
-        <div class="amount2">$20.00</div>
-      </div>
-    </div>
+    </main>
+
+    <nav class="bottom-nav">
+      <a href="homelanding.html" class="nav-item">
+        <span class="icon">🏠</span>
+        <span class="label">Home</span>
+      </a>
+      <a href="menucatalog.html" class="nav-item">
+        <span class="icon">☕</span>
+        <span class="label">Menu</span>
+      </a>
+      <a href="seatoutlet.html" class="nav-item">
+        <span class="icon">🪑</span>
+        <span class="label">Meja</span>
+      </a>
+      <a href="checkout.html" class="nav-item active">
+        <span class="icon">🛍</span>
+        <span class="label">Keranjang</span>
+      </a>
+    </nav>
   </div>
-  <div class="primary-action">
-    <div class="action-label">Checkout</div>
-    <div class="action-detail">$20.00</div>
-  </div>
-</div>
+
+  <script src="script.js"></script>
+</body>
+</html>

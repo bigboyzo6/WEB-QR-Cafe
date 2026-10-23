@@ -3,82 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>QR-Cafe - Checkout</title>
+  <title>QR-Cafe - Welcome</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body class="mobile-body">
-  <div class="mobile-container checkout-container">
-    <header class="top-bar">
-      <button class="back-link" onclick="history.back()">←</button>
-      <div class="brand inline">
-        <span class="logo-icon">☕</span>
-        <h2>QR-Cafe</h2>
+  <div class="mobile-container welcome-container">
+    <div class="cafe-header">
+      <span class="logo-icon">☕</span>
+      <h1 class="logo-title">QR-Cafe</h1>
+    </div>
+
+    <div class="hero-card">
+      <img src="https://images.unsplash.com/photo-1517256064527-09c73fc73e38?auto=format&fit=crop&w=600&q=80" alt="Coffee and Croissant" class="hero-img">
+      <div class="badge-overlay">
+        <span>📷 Your table. Your favorites.</span>
       </div>
-    </header>
+    </div>
 
-    <main class="content-area">
-      <div class="checkout-header">
-        <div>
-          <h1>Checkout</h1>
-          <p class="subtitle" id="checkout-user-sub"></p>
-        </div>
-      </div>
+    <div class="welcome-text">
+      <h2>Pesan dari mejamu melalui layanan ini</h2>
+      <p>Setelah anda memesan, kami akan mengantarkan pesanan anda.</p>
+    </div>
 
-      <div id="cart-empty" class="empty-cart-state">
-        <div class="empty-icon">🛒</div>
-        <h3>Keranjang Anda Kosong</h3>
-        <p>Isilah dengan menu kami</p>
-        <a href="menucatalog.html" class="btn btn-primary margin-top-md">Lihat Menu</a>
-      </div>
-
-      <div id="cart-content" class="cart-filled-state" style="display: none;">
-        <div class="section-header">
-          <h3>Ringkasan Pesanan</h3>
-          <span class="item-count" id="cart-item-count">1 item</span>
-        </div>
-
-        <div class="order-list" id="order-list-container"></div>
-
-        <div class="promo-section">
-          <label>Kode Promo</label>
-          <div class="promo-input">
-            <input type="text" placeholder="Masukkan kode">
-            <button class="btn-claim">Klaim</button>
-          </div>
-        </div>
-
-        <div class="summary-breakdown">
-          <div class="summary-row total">
-            <span>Subtotal</span>
-            <span id="cart-subtotal">$0.00</span>
-          </div>
-        </div>
-
-        <button class="btn btn-primary btn-full flex-between-btn margin-top-lg" id="btn-checkout">
-          <span>Checkout</span>
-          <span id="checkout-total-btn">$0.00</span>
-        </button>
-      </div>
-    </main>
-
-    <nav class="bottom-nav">
-      <a href="homelanding.html" class="nav-item">
-        <span class="icon">🏠</span>
-        <span class="label">Home</span>
-      </a>
-      <a href="menucatalog.html" class="nav-item">
-        <span class="icon">☕</span>
-        <span class="label">Menu</span>
-      </a>
-      <a href="seatoutlet.html" class="nav-item">
-        <span class="icon">🪑</span>
-        <span class="label">Meja</span>
-      </a>
-      <a href="index.html" class="nav-item active">
-        <span class="icon">🛍</span>
-        <span class="label">Keranjang</span>
-      </a>
-    </nav>
+    <a href="login.html" class="btn btn-primary btn-full">Pesan</a>
   </div>
 
   <script src="script.js"></script>
