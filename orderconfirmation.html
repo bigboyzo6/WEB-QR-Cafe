@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QR-Cafe - Pesanan Dikonfirmasi</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="mobile-body">
+  <div class="mobile-container confirmation-container">
+    <header class="top-bar">
+      <div class="brand">
+        <span class="logo-icon">☕</span>
+        <h2>QR-Cafe</h2>
+      </div>
+    </header>
+
+    <main class="content-area center-content">
+      <div class="success-icon">✓</div>
+      <h1 class="confirm-title">Pesanan Dikonfirmasi<br>(Estimasi 12 Menit)</h1>
+      <p class="confirm-sub">Pesanan Dikonfirmasi (Estimasi 12 Menit)</p>
+
+      <div class="receipt-card">
+        <div class="receipt-header">
+          <div>
+            <h3>Pesanan</h3>
+            <p class="order-id">Order #QC-0806</p>
+          </div>
+        </div>
+
+        <div class="receipt-items" id="receipt-items-list"></div>
+
+        <div class="receipt-footer">
+          <span>Total</span>
+          <span class="total-amount" id="receipt-total">$0.00</span>
+        </div>
+      </div>
+
+      <p class="wait-msg">☕ Mohon ditunggu untuk pesanannya, terima kasih:).</p>
+
+      <button class="btn btn-dark btn-full" onclick="window.location.href='homelanding.html'">Home</button>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

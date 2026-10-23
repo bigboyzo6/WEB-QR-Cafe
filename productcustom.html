@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QR-Cafe - Custom Product</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="mobile-body">
+  <div class="mobile-container no-padding">
+    <div class="product-header">
+      <img id="custom-img" src="https://images.unsplash.com/photo-1534778101976-62847782c213?auto=format&fit=crop&w=600&q=80" alt="Product">
+      <button class="icon-btn back-btn" onclick="history.back()">←</button>
+      <button class="icon-btn close-btn" onclick="window.location.href='menucatalog.html'">✕</button>
+    </div>
+
+    <div class="product-details">
+      <div class="title-row">
+        <h2 id="custom-title">Flat White</h2>
+        <span class="base-price" id="custom-price">$4.50</span>
+      </div>
+      <p class="product-description">
+        Dibuat segar sesuai dengan permintaan pesanan anda.
+      </p>
+
+      <div class="option-group">
+        <label class="group-title">Sugar</label>
+        <div class="chip-options">
+          <button class="chip active">No sugar</button>
+          <button class="chip">Less sugar</button>
+          <button class="chip">Regular</button>
+        </div>
+      </div>
+
+      <div class="option-group">
+        <label class="group-title">Milk</label>
+        <div class="radio-list">
+          <label class="radio-item">
+            <input type="radio" name="milk" value="0">
+            <span class="radio-text">Whole milk</span>
+            <span class="radio-meta">Included</span>
+          </label>
+          <label class="radio-item selected">
+            <input type="radio" name="milk" value="0.55" checked>
+            <span class="radio-text">Almond milk</span>
+            <span class="radio-meta">+ $0.55</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="option-group">
+        <div class="flex-between">
+          <label class="group-title">Notes</label>
+          <span class="optional-tag">Optional</span>
+        </div>
+        <textarea class="notes-input" placeholder="Tulis catatan pesananmu disini"></textarea>
+      </div>
+
+      <button class="btn btn-primary btn-full flex-between-btn" id="btn-add-cart-custom">
+        <span>Masukkan ke keranjang</span>
+        <span id="custom-total-btn">$5.05</span>
+      </button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

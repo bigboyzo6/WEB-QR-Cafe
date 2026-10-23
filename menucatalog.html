@@ -3,132 +3,104 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>QR-Cafe Catalog</title>
+  <title>QR-Cafe - Menu</title>
   <link rel="stylesheet" href="style.css">
-  <!-- Menggunakan Font Inter dari Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="mobile-body">
+  <div class="mobile-container has-nav">
+    <header class="top-bar">
+      <div class="brand">
+        <span class="logo-icon">☕</span>
+        <h2>QR-Cafe</h2>
+      </div>
+    </header>
 
-  <div class="menu-catalog">
-    <div class="menu-content">
-      
-      <!-- Header Section -->
-      <header class="header">
-        <div class="brand">
-          <svg class="coffee-mark" width="26" height="18" viewBox="0 0 26 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Logo Coffee Mark">
-            <path d="M1.36816 1.00043H20.5264C21.7127 1.00044 22.8505 1.47121 23.6895 2.31C24.5284 3.14898 25 4.28757 25 5.47406C24.9999 6.66043 24.5283 7.79825 23.6895 8.63715C22.8505 9.47602 21.7128 9.94768 20.5264 9.94769H18.1582V12.3159C18.1582 13.5023 17.6865 14.64 16.8477 15.4789C16.0088 16.3178 14.8709 16.7894 13.6846 16.7895H5.47363C4.28716 16.7895 3.14951 16.3179 2.31055 15.4789C1.47158 14.64 1.00001 13.5023 1 12.3159V1.36859C1 1.27098 1.03846 1.17692 1.10785 1.10785C1.17645 1.03882 1.27055 1.0005 1.36816 1.00043Z" stroke="#4A2C2A" stroke-width="2" stroke-linecap="round"/>
-          </svg>
-          <span class="brand-title">QR-Cafe</span>
-        </div>
-        <div class="table-badge">
-          <span class="table-number">08</span>
-        </div>
-      </header>
+    <main class="content-area">
+      <h1 class="page-title">Table</h1>
+      <p class="page-sub">Menu favoritmu, dibuat saat dipesan.</p>
 
-      <!-- Introduction Section -->
-      <div class="introduction">
-        <span class="intro-title">Table 08</span>
-        <!-- Mengubah subtitle menjadi h1 sebagai judul utama dokumen -->
-        <h1 class="intro-subtitle">Menu favoritmu, dibuat saat dipesan.</h1>
+      <div class="category-tabs">
+        <button class="tab-btn active">All</button>
+        <button class="tab-btn">Vegetarian</button>
+        <button class="tab-btn">Dairy-free</button>
       </div>
 
-      <!-- Dietary Filters Section -->
-      <div class="dietary-filters">
-        <div class="dietary-tag active">
-          <span class="tag-text">All</span>
-        </div>
-        <div class="dietary-tag">
-          <span class="tag-text">Vegetarian</span>
-        </div>
-        <div class="dietary-tag">
-          <span class="tag-text">Dairy-free</span>
-        </div>
+      <div class="section-header">
+        <h3>Menu Favorit</h3>
+        <span class="item-count">4 items</span>
       </div>
 
-      <!-- Menu Selection Section -->
-      <section class="menu-selection">
-        <div class="section-heading">
-          <h2 class="heading-title">Menu Favorit</h2>
-          <span class="heading-count">4 items</span>
-        </div>
-
-        <!-- Product Grid -->
-        <div class="product-grid">
-          
-          <!-- Row 1 -->
-          <div class="product-row">
-            <!-- Product 1 -->
-            <div class="product-card">
-              <img class="product-image" src="Assets/flat-white.png" alt="Flat White">
-              <div class="product-info">
-                <span class="product-title">Flat White</span>
-                <span class="product-desc">Pilihan Barista</span>
-                <div class="purchase-row">
-                  <span class="product-price">$4.50</span>
-                  <div class="add-btn">
-                    <span class="add-btn-text">+ Add</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Product 2 -->
-            <div class="product-card">
-              <img class="product-image" src="Assets/banana-bread.png" alt="Banana Bread">
-              <div class="product-info">
-                <span class="product-title">Banana Bread</span>
-                <span class="product-desc">Vegetarian</span>
-                <div class="purchase-row">
-                  <span class="product-price">$3.20</span>
-                  <div class="add-btn">
-                    <span class="add-btn-text">+ Add</span>
-                  </div>
-                </div>
-              </div>
+      <div class="menu-grid">
+        <div class="menu-card" onclick="openCustom('Flat White', 4.50, 'https://images.unsplash.com/photo-1534778101976-62847782c213?auto=format&fit=crop&w=400&q=80')">
+          <img src="https://images.unsplash.com/photo-1534778101976-62847782c213?auto=format&fit=crop&w=400&q=80" alt="Flat White">
+          <div class="card-body">
+            <h4>Flat White</h4>
+            <p class="desc">Pilihan Barista</p>
+            <div class="card-footer">
+              <span class="price">$4.50</span>
+              <button class="btn-add" onclick="event.stopPropagation(); addDirect('Flat White', 4.50, 'https://images.unsplash.com/photo-1534778101976-62847782c213?auto=format&fit=crop&w=400&q=80', 'Barista Pick');">+ Add</button>
             </div>
           </div>
+        </div>
 
-          <!-- Row 2 -->
-          <div class="product-row">
-            <!-- Product 3 -->
-            <div class="product-card">
-              <img class="product-image" src="Assets/almond-croissant.png" alt="Almond Croissant">
-              <div class="product-info">
-                <span class="product-title">Almond Croissant</span>
-                <span class="product-desc">Mengandung kacang</span>
-                <div class="purchase-row">
-                  <span class="product-price">$2.75</span>
-                  <div class="add-btn">
-                    <span class="add-btn-text">+ Add</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Product 4 -->
-            <div class="product-card">
-              <img class="product-image" src="Assets/hot-chocolate.png" alt="Hot Chocolate">
-              <div class="product-info">
-                <span class="product-title">Product Name</span>
-                <span class="product-desc">Deskripsi Produk</span>
-                <div class="purchase-row">
-                  <span class="product-price">$0.00</span>
-                  <div class="add-btn">
-                    <span class="add-btn-text">+ Add</span>
-                  </div>
-                </div>
-              </div>
+        <div class="menu-card" onclick="openCustom('Banana Bread', 3.20, 'https://images.unsplash.com/photo-1608198093002-ad4e005484ec?auto=format&fit=crop&w=400&q=80')">
+          <img src="https://images.unsplash.com/photo-1608198093002-ad4e005484ec?auto=format&fit=crop&w=400&q=80" alt="Banana Bread">
+          <div class="card-body">
+            <h4>Banana Bread</h4>
+            <p class="desc">Vegetarian</p>
+            <div class="card-footer">
+              <span class="price">$3.20</span>
+              <button class="btn-add" onclick="event.stopPropagation(); addDirect('Banana Bread', 3.20, 'https://images.unsplash.com/photo-1608198093002-ad4e005484ec?auto=format&fit=crop&w=400&q=80', 'One slice · served warm');">+ Add</button>
             </div>
           </div>
-
         </div>
-      </section>
 
-    </div>
+        <div class="menu-card" onclick="openCustom('Almond Croissant', 2.75, 'https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=400&q=80')">
+          <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=400&q=80" alt="Almond Croissant">
+          <div class="card-body">
+            <h4>Almond Croissant</h4>
+            <p class="desc">Mengandung kacang</p>
+            <div class="card-footer">
+              <span class="price">$2.75</span>
+              <button class="btn-add" onclick="event.stopPropagation(); addDirect('Almond Croissant', 2.75, 'https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=400&q=80', 'Freshly baked');">+ Add</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu-card" onclick="openCustom('Hot Chocolate', 3.00, 'https://images.unsplash.com/photo-1542990253-0d0f5be5f0ed?auto=format&fit=crop&w=400&q=80')">
+          <img src="https://images.unsplash.com/photo-1542990253-0d0f5be5f0ed?auto=format&fit=crop&w=400&q=80" alt="Hot Chocolate">
+          <div class="card-body">
+            <h4>Hot Chocolate</h4>
+            <p class="desc">Caffeine-free</p>
+            <div class="card-footer">
+              <span class="price">$3.00</span>
+              <button class="btn-add" onclick="event.stopPropagation(); addDirect('Hot Chocolate', 3.00, 'https://images.unsplash.com/photo-1542990253-0d0f5be5f0ed?auto=format&fit=crop&w=400&q=80', 'Regular · whole milk');">+ Add</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <nav class="bottom-nav">
+      <a href="homelanding.html" class="nav-item">
+        <span class="icon">🏠</span>
+        <span class="label">Home</span>
+      </a>
+      <a href="menucatalog.html" class="nav-item active">
+        <span class="icon">☕</span>
+        <span class="label">Menu</span>
+      </a>
+      <a href="seatoutlet.html" class="nav-item">
+        <span class="icon">🪑</span>
+        <span class="label">Meja</span>
+      </a>
+      <a href="index.html" class="nav-item">
+        <span class="icon">🛍</span>
+        <span class="label">Keranjang</span>
+      </a>
+    </nav>
   </div>
 
+  <script src="script.js"></script>
 </body>
 </html>

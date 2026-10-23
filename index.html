@@ -1,85 +1,86 @@
-
-    <!DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html lang="id">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
-<meta charset="utf-8" />
-<link rel="stylesheet" href="globals.css">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QR-Cafe - Checkout</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
-<div class="welcome" ><img class="welcome-content" src="img/welcome-content.png" />
-<div class="order-button" ><div class="button-label" >Pesan</div></div></div>
+<body class="mobile-body">
+  <div class="mobile-container checkout-container">
+    <header class="top-bar">
+      <button class="back-link" onclick="history.back()">←</button>
+      <div class="brand inline">
+        <span class="logo-icon">☕</span>
+        <h2>QR-Cafe</h2>
+      </div>
+    </header>
+
+    <main class="content-area">
+      <div class="checkout-header">
+        <div>
+          <h1>Checkout</h1>
+          <p class="subtitle" id="checkout-user-sub"></p>
+        </div>
+      </div>
+
+      <div id="cart-empty" class="empty-cart-state">
+        <div class="empty-icon">🛒</div>
+        <h3>Keranjang Anda Kosong</h3>
+        <p>Isilah dengan menu kami</p>
+        <a href="menucatalog.html" class="btn btn-primary margin-top-md">Lihat Menu</a>
+      </div>
+
+      <div id="cart-content" class="cart-filled-state" style="display: none;">
+        <div class="section-header">
+          <h3>Ringkasan Pesanan</h3>
+          <span class="item-count" id="cart-item-count">1 item</span>
+        </div>
+
+        <div class="order-list" id="order-list-container"></div>
+
+        <div class="promo-section">
+          <label>Kode Promo</label>
+          <div class="promo-input">
+            <input type="text" placeholder="Masukkan kode">
+            <button class="btn-claim">Klaim</button>
+          </div>
+        </div>
+
+        <div class="summary-breakdown">
+          <div class="summary-row total">
+            <span>Subtotal</span>
+            <span id="cart-subtotal">$0.00</span>
+          </div>
+        </div>
+
+        <button class="btn btn-primary btn-full flex-between-btn margin-top-lg" id="btn-checkout">
+          <span>Checkout</span>
+          <span id="checkout-total-btn">$0.00</span>
+        </button>
+      </div>
+    </main>
+
+    <nav class="bottom-nav">
+      <a href="homelanding.html" class="nav-item">
+        <span class="icon">🏠</span>
+        <span class="label">Home</span>
+      </a>
+      <a href="menucatalog.html" class="nav-item">
+        <span class="icon">☕</span>
+        <span class="label">Menu</span>
+      </a>
+      <a href="seatoutlet.html" class="nav-item">
+        <span class="icon">🪑</span>
+        <span class="label">Meja</span>
+      </a>
+      <a href="index.html" class="nav-item active">
+        <span class="icon">🛍</span>
+        <span class="label">Keranjang</span>
+      </a>
+    </nav>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
-
-
-    <!DOCTYPE html>
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
-<meta charset="utf-8" />
-<link rel="stylesheet" href="globals.css">
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-<div class="login-and" ><div class="verification-content" ><header class="header" ><div class="brand" ><img class="coffee-mark" src="img/coffee-mark.svg" />
-<div class="app-logo" >QR-Cafe</div></div></header>
-<div class="div" ><div class="title" >Nikmati Suasana Kafe Kami.</div>
-<p class="description" >Isi dulu data diri anda.</p></div>
-<div class="div-2" ><div class="div" ><label class="field-label" for="input-1">Email</label>
-<div class="input" ><div class="vector-wrapper" ><img class="vector" src="img/vector.svg" /></div>
-<input class="value" placeholder="alex@email.com" type="email" id="input-1" /></div></div>
-<div class="div" ><div class="field-label" >Nama</div>
-<div class="input" ><div class="vector-wrapper" ><img class="img" src="img/image.svg" /></div>
-<div class="text-wrapper" >Alex Morgan</div></div></div>
-<div class="div" ><div class="field-label" >No Meja</div>
-<div class="input-2" ><div class="vector-wrapper" ><img class="vector-2" src="img/vector-2.svg" /></div>
-<div class="text-wrapper" >Meja 08</div></div></div></div>
-<div class="table-note" ><div class="circle-check" ><img class="vector-3" src="img/vector-3.svg" /></div>
-<p class="supporting-message" >Meja terverifikasi, anda dapat melanjutkan pesanan</p></div></div>
-<div class="div-2" ><div class="primary-action" ><div class="action-label" >Verifikasi Saya</div></div>
-<p class="privacy-note" >Data hanya untuk pemesanan, bukan untuk tujuan lain.</p></div></div>
-</body>
-</html>
-
-
-    <!DOCTYPE html>
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
-<meta charset="utf-8" />
-<link rel="stylesheet" href="globals.css">
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-<div class="home-landing" ><div class="home-content" ><header class="header" ><div class="brand" ><img class="coffee-mark" src="img/coffee-mark.svg" />
-<div class="app-logo" >QR-Cafe</div></div>
-<div class="table-badge" ><div class="table" >08</div></div></header>
-<div class="div" ><div class="status-badge" ><div class="check" ><img class="vector" src="img/vector-4.svg" /></div>
-<div class="status" >Meja 08 Terverifikasi</div></div>
-<div class="title" >Kopi Nikmat. <br/>Momen Hangat.</div></div>
-<div class="hero-promo-banner" ><img class="coffee-and-pastry" src="img/coffee-and-pastry.png" />
-<div class="promo-message" ><div class="promo-heading" ><div class="eyebrow" >RITUAL HARIANMU</div>
-<div class="arrow-up-right" ><img class="img" src="img/vector-6.svg" /></div></div>
-<p class="offer-title" >Paduan Kopi &amp; Roti Fresh.</p>
-<p class="offer-detail" >Dibuat segar. Diantar langsung ke mejamu.</p></div></div>
-<div class="div" ><p class="section-title" >Silakan duduk, kami siap melayani.</p>
-<div class="feature-cards" ><div class="quick-feature" ><div class="vector-wrapper" ><img class="vector-2" src="img/vector.svg" /></div>
-<div class="text-wrapper" >Jelajahi Menu</div>
-<p class="description" >Kopi, roti, dan hidangan favorit.</p></div>
-<div class="quick-feature" ><div class="vector-wrapper" ><img class="vector-3" src="img/vector-2.svg" /></div>
-<div class="text-wrapper" >Cari Tempatmu</div>
-<p class="description" >Cek meja &amp; stopkontak terdekat.</p></div></div></div></div>
-<div class="navigation" ><div class="navigation-item" ><div class="img-wrapper" ><img class="vector-4" src="img/image.svg" /></div>
-<div class="label" >Home</div></div>
-<div class="navigation-item" ><div class="img-wrapper" ><img class="vector-4" src="img/vector-7.svg" /></div>
-<div class="label-2" >Menu</div></div>
-<div class="navigation-item" ><div class="img-wrapper" ><img class="vector-5" src="img/vector-3.svg" /></div>
-<div class="label-2" >Meja</div></div>
-<div class="navigation-item" ><div class="img-wrapper" ><img class="vector-4" src="img/vector-5.svg" /></div>
-<div class="label-2" >Keranjang</div></div></div></div>
-</body>
-</html>
-
-
