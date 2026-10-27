@@ -1,3 +1,5 @@
+const API_URL = "https://6adffa6e8e42963c8d5e9c66.mockapi.io/orders";
+
 function openCustom(name, price, img) {
   const selectedProduct = { name, price, img };
   localStorage.setItem("tempProduct", JSON.stringify(selectedProduct));
@@ -12,6 +14,7 @@ function addDirect(name, price, img, desc) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  // 1. Verifikasi Data Diri Pelanggan
   const verifyForm = document.getElementById("verify-form");
   if (verifyForm) {
     verifyForm.addEventListener("submit", (e) => {
@@ -25,6 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // Subtitle nama & nomor meja di Checkout
   const checkoutSub = document.getElementById("checkout-user-sub");
   if (checkoutSub) {
     const userName = localStorage.getItem("userName");
@@ -38,6 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  // 2. Logika Kustomisasi Produk (productcustom.html)
   const tempProdStr = localStorage.getItem("tempProduct");
   if (tempProdStr && document.getElementById("custom-title")) {
     const prod = JSON.parse(tempProdStr);
@@ -92,6 +97,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  // 3. Render Daftar Pesanan & Total di checkout.html
   const cartContainer = document.getElementById("order-list-container");
   if (cartContainer) {
     let cart = JSON.parse(localStorage.getItem("userCart") || "[]");
@@ -132,14 +138,58 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  // 4. Proses Checkout & Pengiriman Data Async ke MockAPI
+  const btnCheckout = document.getElementById("btn-checkout");
+  if (btnCheckout) {
+    btnCheckout.addEventListener("click", async () => {
+      const cart = JSON.parse(localStorage.getItem("userCart") || "[]");
+      const userName = localStorage.getItem("userName") || "Pelanggan";
+      const userMeja = localStorage.getItem("userMeja") || "08";
+
+      let total = 0;
+      cart.forEach(item => total += item.price);
+
+      const payload = {
+        userName: userName,
+        userMeja: userMeja,
+        items: cart,
+        totalPrice: total
+      };
+
+      try {
+        btnCheckout.textContent = "Memproses...";
+        const response = await fetch(API_URL, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload)
+        });
+
+        if (response.ok) {
+          const resultData = await response.json();
+          localStorage.setItem("lastOrder", JSON.stringify(resultData.items));
+          localStorage.setItem("lastOrderTotal", resultData.totalPrice);
+          localStorage.removeItem("userCart");
+          window.location.href = "orderconfirmation.html";
+        } else {
+          alert("Gagal terhubung ke database server.");
+          btnCheckout.textContent = "Checkout";
+        }
+      } catch (error) {
+        console.error("Error API:", error);
+        alert("Terjadi kesalahan jaringan.");
+        btnCheckout.textContent = "Checkout";
+      }
+    });
+  }
+
+  // 5. Render Struk di orderconfirmation.html dari Data Terakhir
   const receiptList = document.getElementById("receipt-items-list");
   if (receiptList) {
     const lastOrder = JSON.parse(localStorage.getItem("lastOrder") || "[]");
+    const lastTotal = parseFloat(localStorage.getItem("lastOrderTotal") || "0");
     receiptList.innerHTML = "";
-    let total = 0;
 
     lastOrder.forEach(item => {
-      total += item.price;
       const rItem = `
         <div class="r-item">
           <span>1 × ${item.name} (${item.desc})</span>
@@ -149,17 +199,7 @@ document.addEventListener("DOMContentLoaded", () => {
       receiptList.innerHTML += rItem;
     });
 
-    document.getElementById("receipt-total").textContent = `$${total.toFixed(2)}`;
-  }
-
-  const btnCheckout = document.getElementById("btn-checkout");
-  if (btnCheckout) {
-    btnCheckout.addEventListener("click", () => {
-      const cart = JSON.parse(localStorage.getItem("userCart") || "[]");
-      localStorage.setItem("lastOrder", JSON.stringify(cart));
-      localStorage.removeItem("userCart");
-      window.location.href = "orderconfirmation.html";
-    });
+    document.getElementById("receipt-total").textContent = `$${lastTotal.toFixed(2)}`;
   }
 });
 
